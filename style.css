@@ -1,0 +1,45 @@
+/*
+  style.css 
+  Feel free to change this CSS for your own purposes
+*/
+
+/* Using font-size: larger to make things pop. Feel free to change. */
+body {
+    background-color:darkolivegreen;
+    color: white;
+    margin: 30px;
+    font-size: x-large;
+}
+
+h1 {
+    margin-bottom: 0;
+    margin-left: 120px;
+}
+
+h6 {
+    margin-top: 10px;
+    margin-left: 120px;
+}
+
+h3 {
+    text-decoration: underline;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button {
+    margin: 20px;
+    font-size: xx-large;
+}
+
+.left {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+div.scrollable {
+    width: 100%;
+    max-height:400px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
