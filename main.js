@@ -56,7 +56,7 @@ async function sample() {
         console.log(arr[i]);
         await sleep(750);
     }
-}
+ }
 
 // Add output to the "output" section of the webpage
 function output(str) {
@@ -101,3 +101,128 @@ function attack(attacker, defender) {
     }
 }
 
+/* actual work below */
+
+function print_array(arr){
+    let element = 0;
+    do{
+        console.log(arr[element]);
+        element++;
+    } while (arr[element] != null);
+    console.log("")
+    return;
+}
+print_array([1, 1, 2, 3, 5, 8, 13]);
+
+function min(arr){
+    let element = 0;
+    let lowest = Infinity;
+    do{
+        if (lowest >= arr[element]){
+            lowest = arr[element]
+        }
+        element++;
+    } while (arr[element] != null);
+    console.log(lowest);
+    console.log("");
+    return;
+}
+min([6,5,4,3,2,3,4,5,6])   // returns 2
+min([5,5,5,5,5,5,5]);      // returns 5
+
+function longest_string(arr){
+    let element = 0;
+    let longest = 0;
+    let string = "";
+    do{
+        if (longest <= string.length){
+            longest = string;
+        }
+        element++;
+        string = arr[element];
+    } while (arr[element] != null);
+    console.log(longest);
+    console.log("");
+    return;
+}
+longest_string(["ltsiru", "suehrgabsergi"]);
+
+function contains(arr, value){
+    let element = 0;
+    let check = true;
+    do{
+        if ((value === arr[element]) && (value == arr[element])){
+            check = true;
+            element = Infinity;
+        } else{
+            check = false;
+        }
+        element++;
+    } while (arr[element] != null);
+    console.log(check);
+    return;
+}
+let someValues = [1, 2, 3, 4, "hello"];
+contains(someValues, "hello");   // Returns true
+contains(someValues, 5);         // Returns false
+contains(someValues, "HELLO");   // Returns false
+contains(someValues, 2);         // Returns true
+contains(someValues, "2");       // Returns false
+
+
+/* challenging works (5, 6, 7) */
+
+function min_max(arr){
+    // make element to run through full array
+    let element = 0;
+    // lowest as infinity so it will always be replaced by something lower
+    let lowest = Infinity;
+    // highest as negative infinity for replacing purposes
+    let highest = Number.NEGATIVE_INFINITY;
+    let array;
+
+    // find lowest while array lasts
+    do{
+        if (lowest >= arr[element]){
+            lowest = arr[element]
+        }
+        element++;
+    } while (arr[element] != null);
+
+    //find highest while array lasts
+    do{
+        if (highest <= arr[element]){
+            highest = arr[element]
+        }
+        element++;
+    } while (arr[element] != null);
+
+    array = [lowest, highest]
+    console.log(array);
+    console.log("");
+    return array;
+}
+let my_array = [7,2,-4,5,2,9,8,0,1,3,9,-5,-1,5,-1,-8,2,3];
+min_max(my_array);  // returns [-8, 9]
+min_max[5,5,5,5,5,5,5];  // returns [5, 5]
+
+function sum(arr){
+    let element = 0;
+    let sum = 0;
+    do{
+        if (isNaN(arr[element]) == false){
+            sum = sum + Number(arr[element]);
+        }
+        element++
+    } while (arr[element] != null)
+    console.log(sum);
+    return sum;
+}
+sum([1,2,3,4,5]);  // returns 15
+
+let x = ["Hello", "4", 3, "s'up?", true];
+sum(x);  // returns 8 because of "4", 3, and true
+
+function reverse_strings(arr){
+    //thing
+}
